@@ -4,7 +4,7 @@
 
 body {
   color: #333;
-  font-size: 1.8em;
+  font-size: 1.5em;
   margin: 0 auto;
   max-width: 50em;
   font-family: "Helvetica", "Arial", sans-serif;
@@ -13,19 +13,19 @@ body {
 }
 
 h1 {
-  font-size: 4em;
-}
-
-h2 {
   font-size: 3em;
 }
 
-h3 {
+h2 {
   font-size: 2.5em;
 }
 
+h3 {
+  font-size: 2em;
+}
+
 h2, h3 {
-  margin-top: 2.5em;
+  margin-top: 2em;
 }
 
 h1, h2, strong {
