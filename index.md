@@ -8,3 +8,5 @@ layout: default
 a venture by [Philipp von Essen](mailto:ph.vonessen@bluewin.ch) and [Tobias Kuhn](mailto:kuhntobias@gmail.com)
 
 _coming soon..._
+
+(subscribe [here](mailto:knowledgepixels+subscribe@googlegroups.com?subject=auto-subscribe&body=Sending%20this%20email%20will%20automatically%20subscribe%20you.) if you like to be notified when we have more to show)
