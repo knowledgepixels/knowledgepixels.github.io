@@ -1,5 +1,5 @@
 ---
-title: News
+title: Knowledge Pixels
 layout: default
 ---
 
