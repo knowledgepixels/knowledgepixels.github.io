@@ -5,6 +5,8 @@ layout: default
 
 # Knowledge Pixels
 
+— _building the ecosystem of semantic-born knowledge_ —
+
 a venture by [Philipp von Essen](mailto:ph.vonessen@bluewin.ch) and [Tobias Kuhn](mailto:kuhntobias@gmail.com)
 
 Zeughausstrasse 31, 8004 Zurich, Switzerland
