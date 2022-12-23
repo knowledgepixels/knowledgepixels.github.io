@@ -8,7 +8,7 @@ body {
   text-align: center;
   margin: 0 auto;
   max-width: 50em;
-  font-family: "Helvetica", "Arial", sans-serif;
+  font-family: Verdana, Geneva, sans-serif;
   line-height: 1.5;
   padding: 2em 1em;
 }
@@ -29,8 +29,14 @@ h2, h3 {
   margin-top: 2em;
 }
 
-h1, h2, strong {
+h2, strong {
   color: #111;
+}
+
+h1 {
+  color: #e08080;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
 }
 
 code, pre {
@@ -48,6 +54,6 @@ pre {
 }
 
 a {
-  color: #c2a92b;
+  color: #e08080;
   text-decoration: none;
 }
