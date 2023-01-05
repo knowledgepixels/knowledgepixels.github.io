@@ -33,12 +33,6 @@ h2, strong {
   color: #111;
 }
 
-h1 {
-  color: #e08080;
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: black;
-}
-
 code, pre {
   background: #eee;
 }
