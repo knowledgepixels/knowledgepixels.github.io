@@ -5,7 +5,6 @@
 body {
   color: #333;
   font-size: 1.5em;
-  text-align: center;
   margin: 0 auto;
   max-width: 50em;
   font-family: Verdana, Geneva, sans-serif;
@@ -15,6 +14,11 @@ body {
 
 h1 {
   font-size: 3em;
+  text-align: center;
+}
+
+h1 + p {
+  text-align: center;
 }
 
 h2 {
