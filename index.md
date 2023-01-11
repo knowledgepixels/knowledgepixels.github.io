@@ -16,7 +16,7 @@ We are a team of two co-founders and friends:
 
 We will soon have more to tell you about, as well as a beautiful website. Please [subscribe](mailto:knowledgepixels+subscribe@googlegroups.com?subject=auto-subscribe&body=Sending%20this%20email%20will%20automatically%20subscribe%20you.) if you would like to receive notifications.
 
-### Short Intro
+#### Short Intro
 
 We provide software and services that make it possible to publish scientific findings in a way that is machine interpretable, open, decentralized and in full accordance with the FAIR Principles. With nanopublications as our core technology, we are taking the first steps towards our vision of the [knowledge space](https://w3id.org/knowledge-space/) to make the use of research results radically more efficient and effective.
 
