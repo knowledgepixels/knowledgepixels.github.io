@@ -15,7 +15,7 @@ We are a team of two co-founders and friends:
 
 - [Tobias Kuhn](https://www.tkuhn.org/) for software development & research, [tobias@knowledgepixels.com](mailto:tobias@knowledgepixels.com)
 - [Philipp von Essen](https://www.republik.ch/~pvon.essen) for marketing & business administration, [philipp@knowledgepixels.com](mailto:philipp@knowledgepixels.com)
-- 
+
 We will soon have more to tell you about, as well as a beautiful website. Please ([subscribe](mailto:knowledgepixels+subscribe@googlegroups.com?subject=auto-subscribe&body=Sending%20this%20email%20will%20automatically%20subscribe%20you.) if you would like to receive notifications.
 
 
