@@ -1,0 +1,193 @@
+@font-face
+	font-family: 'Inter'
+	src: url('../fonts/Inter-Light.ttf') format('ttf')
+	font-weight: normal
+	font-style: normal
+@font-face
+	font-family: 'Inter'
+	src: url('../fonts/Inter-Medium.ttf') format('ttf')
+	font-weight: 700
+	font-style: normal
+@font-face
+	font-family: 'Martian KP'
+	src: url('../fonts/MartianMonoKP-Light.woff2') format('woff2')
+	font-weight: normal
+	font-style: normal
+
+$sm: 576px
+$md: 768px
+$lg: 992px
+
+:root
+	--bg: #FDFDFD
+	--bright: #fff
+	--light: #dbc5d0
+	--accent: #db0b5b
+	--heading: #330315
+	--text: #212121
+	--baseFont: 'Inter', sans-serif
+	--headingsFont: 'Martian KP', monospace
+	--gap: 1.5em
+	--shadow: box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px
+	--shadowElevated: box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px
+	
+	@media screen and (min-width: $sm)
+		--gap: 2em
+	@media screen and (min-width: $md)
+		--gap: 3em
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
+	margin: 0
+	padding: 0
+	border: 0
+	font-size: 100%
+	font: inherit
+	vertical-align: baseline
+	
+html
+	background: var(--bg)
+	font-size: 18px
+	font-family: var(--baseFont)
+	
+h1, h2, h3, h4, h5, h6
+	font-family: var(--headingsFont)
+	color: var(--heading)
+	line-height: 1.05em
+	font-weight: normal
+	
+h1
+	font-size: 1.8em
+h2
+	font-size: 1.5em
+h3
+	font-size: 1.3em
+p
+	line-height: 1.4em
+	
+a, a:active, a:visited
+	color: var(--accent)
+
+a:hover
+	color: var(--heading)
+	
+buttons
+	margin: 1em 0 2em
+	line-height: 2.5em
+	width: 100%
+	
+button, .button
+	color: var(--heading)
+	background-color: var(--bright)
+	border: 1px solid var(--heading)
+	text-decoration: none
+	border-radius: 1em
+	padding: .5em 1em
+	transition: background .3s ease
+	box-shadow: var(--shadow)
+	
+	&:hover
+		color: var(--bright)
+		background-color: var(--accent)
+		box-shadow: var(--shadowElevated)
+
+body 
+	line-height: 1
+	
+b
+	font-weight: 700
+	
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, hero, logo, buttons, sub
+	display: block
+	
+img
+	max-width: 100%
+	height: auto
+	
+header, section, footer, hero
+	margin: 0 auto
+	
+	@media screen and (min-width: $sm)
+		max-width: 1200px
+	
+header
+	display: grid
+	grid-template-columns: 1fr 1fr
+	grid-gap: var(--gap)
+	border-bottom: 2px solid var(--heading)
+	position: relative
+	align-items: end
+	padding: var(--gap)
+	
+	logo
+		img
+			max-width: calc(7 * var(--gap))
+			margin-bottom: -.75em
+			
+	sub
+		color: var(--accent)
+		font-size: 1em
+		
+	@media screen and (min-width: $sm)
+		grid-template-columns: 2fr 1fr
+		
+		sub
+			font-size: 1.6em
+			
+hero, section
+	padding: var(--gap)
+	
+	p
+		margin-bottom: 1em
+		
+	sub
+		font-size: 2em
+		color: var(--accent)
+	
+hero container
+	@media screen and (min-width: $sm)
+		display: grid
+		grid-gap: var(--gap)
+		grid-template-columns: 2fr 1fr
+	
+section
+	h2, h3, h4, h5
+		margin-bottom: .5em
+	p
+		margin-bottom: 1em
+		
+	container		
+		@media screen and (min-width: $sm)
+			display: grid
+			grid-template-columns: 1fr 1fr
+			grid-gap: var(--gap)
+		
+		column
+			display: block
+			margin-bottom: calc(2 * var(--gap))
+			
+			@media screen and (min-width: $sm)
+				margin-bottom: 0
+
+ol, ul
+	list-style: none
+
+blockquote, q
+	quotes: none
+
+blockquote:before, blockquote:after, q:before, q:after
+	content: ''
+	content: none
+
+table
+	border-collapse: collapse
+	border-spacing: 0
+
+.portrait
+	margin: calc(var(--gap) / 2) 0
+	
+	img
+		-webkit-mask-image: url(../img/mask.svg)
+		-webkit-mask-repeat: no-repeat
+		max-width: 230px
+		aspect-ratio: 1 / 1
+		object-fit: cover
