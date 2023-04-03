@@ -171,11 +171,22 @@ hero sub, section sub {
   color: var(--accent);
 }
 
+hero container h1 {
+  font-family: var(--headingsFont);
+  color: var(--heading);
+  line-height: 1.05em;
+  font-weight: normal;
+  font-size: 1.4em;
+}
+
 @media screen and (min-width: 576px) {
   hero container {
     display: grid;
     grid-gap: var(--gap);
     grid-template-columns: 2fr 1fr;
+  }
+  hero container h1 {
+    font-size: 1.8em;
   }
 }
 
