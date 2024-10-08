@@ -110,6 +110,7 @@ button:hover, .button:hover {
 
 body {
   line-height: 1;
+  margin-bottom: 80px;
 }
 
 b {
@@ -240,4 +241,14 @@ table {
   max-width: 230px;
   aspect-ratio: 1/1;
   object-fit: cover;
+}
+
+.center {
+  margin: auto;
+  width: 50%;
+  text-align: center;
+}
+
+p.imgsubtitle {
+  margin-top: 20px;
 }
