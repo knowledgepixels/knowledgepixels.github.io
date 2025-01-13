@@ -161,6 +161,15 @@ header sub {
   }
 }
 
+.center img {
+  max-width: 80%;
+}
+@media screen and (min-width: 576px) {
+  .center img {
+    max-width: calc(10 * var(--gap));
+  }
+}
+
 hero, section {
   padding: var(--gap);
 }
@@ -245,7 +254,6 @@ table {
 
 .center {
   margin: auto;
-  width: 50%;
   text-align: center;
 }
 
