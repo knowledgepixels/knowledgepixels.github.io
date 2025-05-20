@@ -58,7 +58,7 @@ html {
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--headingsFont);
   color: var(--heading);
-  line-height: 1.05em;
+  line-height: 1.2em;
   font-weight: normal;
 }
 
@@ -80,6 +80,7 @@ p {
 
 a, a:active, a:visited {
   color: var(--accent);
+  text-decoration: none;
 }
 
 a:hover {
@@ -151,6 +152,7 @@ header logo img {
 header sub {
   color: var(--accent);
   font-size: 1em;
+  line-height: 1.4em;
 }
 @media screen and (min-width: 576px) {
   header {
@@ -184,9 +186,9 @@ hero sub, section sub {
 hero container h1 {
   font-family: var(--headingsFont);
   color: var(--heading);
-  line-height: 1.05em;
+  line-height: 1.4em;
   font-weight: normal;
-  font-size: 1.4em;
+  font-size: 1.3em;
 }
 
 @media screen and (min-width: 576px) {
@@ -196,7 +198,7 @@ hero container h1 {
     grid-template-columns: 2fr 1fr;
   }
   hero container h1 {
-    font-size: 1.8em;
+  font-size: 1.3em;
   }
 }
 
@@ -224,7 +226,12 @@ section container column {
 }
 
 ol, ul {
-  /* list-style: none; */
+  line-height: 1.4em;
+}
+
+li {
+  margin-left: 20px;
+  margin-bottom: 10px;
 }
 
 blockquote, q {
