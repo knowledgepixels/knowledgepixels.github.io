@@ -84,25 +84,11 @@ They all connect to an ecosystem that is fully open, semantic, decentralized, an
 
 <column>
 <h2>Our News</h2>
-<ul>
-
-<li>
-<span><span>We are happy to announce that we are part of three papers that have been accepted for presentation at the <a href="https://fairdo.org/fdo-conference-2026/" rel="nofollow">3rd FAIR Digital Objects Conference</a>. So we are looking forward to presenting our work in Vienna in March!</span></span>
-</li>
-
-<li>
-<span><span>Interested in nanopublications and how they could be useful to you? If so, come join the 
-<a href="https://w3id.org/spaces/fenac" rel="nofollow">Fearless Early Nanopub Adopter Club</a>!</span></span>
-</li>
-
-<li>
-<span><span>We are happy to announce that the final report for the FDO Connect project (a.k.a. FAIR Data Publisher) is now <a href="https://mission-ki.de/en/final-report-on-the-fair-data-publisher-a-foundation-for-interoperable-data-spaces-in-europe" rel="nofollow">available</a>.</span></span>
-</li>
+<ul id="latest-news"></ul>
 
 <buttons>
-<a href="news.html" class="button">See all</a>
+  <a href="news.html" class="button">See all</a>
 </buttons>
-</ul>
 
 </column>
 
@@ -246,6 +232,10 @@ Switzerland</p>
 
 </container>
 </section>
+<script type="module">
+  import { showLatestNews } from "./scripts/news.js";
+  showLatestNews();
+</script>
 
 </body>
 </html>
