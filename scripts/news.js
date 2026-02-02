@@ -36,27 +36,28 @@ export async function showNewsItems() {
 
 export function buildNewsItem({ text, link, np, datePublished }) {
   const li = document.createElement("li");
-  const outer = document.createElement("span");
-  const inner = document.createElement("span");
+  const span = document.createElement("span");
 
   if (text) {
     const clean = DOMPurify.sanitize(text);
-
     const doc = new DOMParser().parseFromString(clean, "text/html");
-    inner.append(...doc.body.childNodes);
+    span.append(...doc.body.childNodes);
   }
 
   if (link) {
     const a = document.createElement("a");
     a.href = link;
     a.rel = "nofollow";
-    a.appendChild(inner);
-    outer.appendChild(a);
-  } else {
-    outer.appendChild(inner);
+    a.textContent = link;
+    const inner = span.querySelector("span");
+    if (inner) {
+      inner.appendChild(a);
+    } else {
+      span.appendChild(a);
+    }
   }
 
-  li.appendChild(outer);
+  li.appendChild(span);
 
   if (datePublished) li.dataset.date = datePublished;
   if (np) li.dataset.nanopub = np;
@@ -134,10 +135,9 @@ export async function showLatestNews(limit = 3) {
         return new Date(b.datePublished) - new Date(a.datePublished);
       })
       .slice(0, limit)
-      .forEach(row => {
+      .forEach((row) => {
         ul.appendChild(buildNewsItem(row));
       });
-
   } catch (err) {
     stopLoading();
     console.error(err);
