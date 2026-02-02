@@ -1,5 +1,5 @@
 import { NanopubClient } from "https://esm.sh/@nanopub/nanopub-js@0.1.0";
-import DOMPurify from "https://esm.sh/dompurify@3.0.6";
+import DOMPurify from "https://esm.sh/dompurify@3.3.1";
 
 export async function showNewsItems() {
   const client = new NanopubClient({
