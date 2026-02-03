@@ -208,6 +208,8 @@ hero container h1 {
 
 section {
   padding: 2em;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 section h2, section h3, section h4, section h5 {
   margin-bottom: 0.5em;
