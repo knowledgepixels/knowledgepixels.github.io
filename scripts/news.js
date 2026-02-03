@@ -51,6 +51,8 @@ export function buildNewsItem({ text, link, np, datePublished }) {
     a.textContent = link;
     const inner = span.querySelector("span");
     if (inner) {
+      const whiteSpace = document.createTextNode(" ");
+      inner.appendChild(whiteSpace);
       inner.appendChild(a);
     } else {
       span.appendChild(a);
