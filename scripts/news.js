@@ -59,6 +59,27 @@ export function buildNewsItem({ text, link, np, datePublished }) {
     }
   }
 
+  if (datePublished) {
+    span.appendChild(document.createTextNode(" – "));
+
+    if (np) {
+      const dateLink = document.createElement("a");
+      dateLink.href = np;
+      dateLink.textContent = datePublished;
+      span.appendChild(dateLink);
+    } else {
+      const dateSpan = document.createElement("span");
+      dateSpan.textContent = datePublished;
+      span.appendChild(dateSpan);
+    }
+  } else if (np) {
+    span.appendChild(document.createTextNode(" – "));
+    const npLink = document.createElement("a");
+    npLink.href = np;
+    npLink.textContent = "Source";
+    span.appendChild(npLink);
+  } 
+
   li.appendChild(span);
 
   if (datePublished) li.dataset.date = datePublished;
