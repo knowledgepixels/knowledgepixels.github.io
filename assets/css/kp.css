@@ -276,3 +276,7 @@ table {
 p.imgsubtitle {
   margin-top: 20px;
 }
+
+.news-items p {
+  display: inline;
+}
