@@ -34,14 +34,23 @@ export async function showNewsItems() {
   }
 }
 
-export function buildNewsItem({ text, link, np, datePublished }) {
+export function buildNewsItem({ headline, body, link, np, datePublished }) {
   const li = document.createElement("li");
   const span = document.createElement("span");
 
-  if (text) {
-    const clean = DOMPurify.sanitize(text);
+  if (headline) {
+    const clean = DOMPurify.sanitize(headline);
     const doc = new DOMParser().parseFromString(clean, "text/html");
-    span.append(...doc.body.childNodes);
+    const strong = document.createElement("strong");
+    strong.append(...[...doc.body.childNodes]);
+    span.appendChild(strong);
+  }
+
+  if (body) {
+    const clean = DOMPurify.sanitize(body);
+    const doc = new DOMParser().parseFromString(clean, "text/html");
+    if (headline) span.appendChild(document.createTextNode(" – "));
+    span.append(...[...doc.body.childNodes]);
   }
 
   if (link) {
@@ -143,7 +152,7 @@ export async function showLatestNews(limit = 3) {
 
   try {
     for await (const row of client.runQueryTemplate(
-      "RAOGCU2nQzZ0aE2iXwJ20jJtnZsjVR0pfFg0qlSxYtBIA/get-news-content",
+      "RAOMMFrJj4SyF4vlvJhr_AQH0jRL2jI9RUAroP5ZKe0D8/get-news-content",
       { resource: "https://w3id.org/spaces/knowledgepixels" }
     )) {
       rows.push(row);
