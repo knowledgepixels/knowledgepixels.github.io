@@ -14,7 +14,7 @@ export async function showNewsItems() {
 
   try {
     for await (const row of client.runQueryTemplate(
-      "RAOGCU2nQzZ0aE2iXwJ20jJtnZsjVR0pfFg0qlSxYtBIA/get-news-content",
+      "RAOMMFrJj4SyF4vlvJhr_AQH0jRL2jI9RUAroP5ZKe0D8/get-news-content",
       { resource: "https://w3id.org/spaces/knowledgepixels" }
     )) {
       stopLoading();
