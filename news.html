@@ -14,6 +14,7 @@
 <meta name="msapplication-TileColor" content="#db0b5b">
 <meta name="theme-color" content="#ffffff">
 <script defer src="https://umami.knowledgepixels.com/script.js" data-website-id="ae29ceea-570f-43d0-8979-6d6d11640250"></script>
+<script type="module" src="https://esm.sh/@nanopub/nanopub-elements@0.1.0"></script>
 </head>
 
 <body>
@@ -32,6 +33,19 @@
 <h2>Our news</h2>
 
 </section>
+
+<nanopub-list
+  query-template="RAOMMFrJj4SyF4vlvJhr_AQH0jRL2jI9RUAroP5ZKe0D8/get-news-content"
+  params='{"resource":"https://w3id.org/spaces/knowledgepixels"}'
+  date-field="datePublished"
+  group-by-year
+><template>
+  <li data-bind-data-date="datePublished" data-bind-data-nanopub="np">
+    <span>
+      <strong data-bind="headline"></strong> – <span data-bind-html="body"></span> – <a data-bind="datePublished" data-bind-href="np"></a>
+    </span>
+  </li>
+</template></nanopub-list>
 
 <section data-year="2025">
 <h3>2025</h3>
@@ -82,9 +96,5 @@
 </ul>
 </section>
 
-  <script type="module">
-    import { showNewsItems } from "./scripts/news.js";
-    showNewsItems();
-  </script>
 </body>
 </html>
