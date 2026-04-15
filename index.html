@@ -14,6 +14,7 @@
 <meta name="msapplication-TileColor" content="#db0b5b">
 <meta name="theme-color" content="#ffffff">
 <script defer src="https://umami.knowledgepixels.com/script.js" data-website-id="ae29ceea-570f-43d0-8979-6d6d11640250"></script>
+<script type="module" src="https://esm.sh/@nanopub/nanopub-elements@0.1.0"></script>
 </head>
 
 <body>
@@ -79,7 +80,19 @@ This knowledge ecosystem is fully open, decentralized, and aligned with the <a t
 
 <column>
 <h2>Our news</h2>
-<ul id="latest-news"></ul>
+<nanopub-list
+  id="latest-news"
+  query-template="RAOMMFrJj4SyF4vlvJhr_AQH0jRL2jI9RUAroP5ZKe0D8/get-news-content"
+  params='{"resource":"https://w3id.org/spaces/knowledgepixels"}'
+  date-field="datePublished"
+  limit="3"
+><template>
+  <li data-bind-data-date="datePublished" data-bind-data-nanopub="np">
+    <span>
+      <strong data-bind="headline"></strong> – <span data-bind-html="body"></span> – <a data-bind="datePublished" data-bind-href="np"></a>
+    </span>
+  </li>
+</template></nanopub-list>
 
 <buttons>
   <a href="news.html" class="button">See all</a>
@@ -227,10 +240,5 @@ Switzerland</p>
 
 </container>
 </section>
-<script type="module">
-  import { showLatestNews } from "./scripts/news.js";
-  showLatestNews();
-</script>
-
 </body>
 </html>
