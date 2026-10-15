@@ -319,3 +319,11 @@ nanopub-list p {
 .logorow a.tall img {
   max-height: 6.5em;
 }
+footer {
+  padding: var(--gap);
+  border-top: 1px solid var(--light);
+  font-size: 0.8em;
+}
+footer a {
+  margin-right: 1.5em;
+}
