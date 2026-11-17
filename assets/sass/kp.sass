@@ -93,7 +93,7 @@ button, .button
 body 
 	line-height: 1
 	
-b
+b, strong
 	font-weight: 700
 	
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, hero, logo, buttons, sub
@@ -164,6 +164,9 @@ section
 		column
 			display: block
 			margin-bottom: calc(2 * var(--gap))
+
+			h2:not(:first-child)
+				margin-top: 1.5em
 			
 			@media screen and (min-width: $sm)
 				margin-bottom: 0

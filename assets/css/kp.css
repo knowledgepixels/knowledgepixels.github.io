@@ -118,7 +118,7 @@ body {
   margin-bottom: 80px;
 }
 
-b {
+b, strong {
   font-weight: 700;
 }
 
@@ -227,6 +227,9 @@ section p {
 section container column {
   display: block;
   margin-bottom: calc(2 * var(--gap));
+}
+section container column h2:not(:first-child) {
+  margin-top: 1.5em;
 }
 @media screen and (min-width: 576px) {
   section container column {
