@@ -14,7 +14,7 @@
 <meta name="msapplication-TileColor" content="#db0b5b">
 <meta name="theme-color" content="#ffffff">
 <script defer src="https://umami.knowledgepixels.com/script.js" data-website-id="ae29ceea-570f-43d0-8979-6d6d11640250"></script>
-<script type="module" src="https://esm.sh/@nanopub/nanopub-elements@0.1.0"></script>
+<script type="module" src="https://esm.sh/@nanopub/nanopub-elements@0.5.0"></script>
 </head>
 
 <body>
@@ -84,7 +84,7 @@ Everything is fully open and aligned with the <a target="_blank" href="https://w
 ><template>
   <li data-bind-data-date="datePublished" data-bind-data-nanopub="np">
     <span>
-      <strong data-bind="headline"></strong> – <span data-bind-html="body"></span> – <a data-bind="datePublished" data-bind-href="np"></a>
+      <strong data-bind="headline"></strong> – <span data-bind-html="body"></span><template data-bind-each="link"> – <a data-bind-href="." target="_blank">more</a></template> – <a data-bind="datePublished" data-bind-href="np"></a>
     </span>
   </li>
 </template></nanopub-list>
